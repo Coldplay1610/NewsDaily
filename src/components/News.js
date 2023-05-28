@@ -29,7 +29,7 @@ export class News extends Component {
     }
     async updateNews(){
       this.props.setProgress(0);
-      const url=`https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=6599fb3b73304135a8049c90ee3045b4&page=${this.state.page}&pageSize=${this.props.pageSize}`;
+      const url=`https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=${this.props.apiKey}&page=${this.state.page}&pageSize=${this.props.pageSize}`;
       this.setState({loading:true});
       let data=await fetch(url);
       this.props.setProgress(30);
